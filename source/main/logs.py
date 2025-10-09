@@ -483,7 +483,7 @@ class Logs:
 
                     if logging["LoggingEnabled"]["TargetPrefix"]:
                         prefix = logging["LoggingEnabled"]["TargetPrefix"]
-                    src_bucket = f"{src_bucket}|{prefix}"
+                        src_bucket = f"{src_bucket}|{prefix}"
 
                     self.results["s3"]["results"].append(src_bucket)
 
