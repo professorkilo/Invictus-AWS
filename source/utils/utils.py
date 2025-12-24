@@ -589,11 +589,11 @@ def set_clients(region):
     global SSM_CLIENT
     global ATHENA_CLIENT
 
-    S3_CLIENT = boto3.client("s3")
-    CLOUDWATCH_CLIENT = boto3.client("cloudwatch")
-    CLOUDTRAIL_CLIENT = boto3.client("cloudtrail")
-    ROUTE53_CLIENT = boto3.client("route53")
-    IAM_CLIENT = boto3.client("iam")
+    S3_CLIENT = boto3.client("s3", region_name=region)
+    CLOUDWATCH_CLIENT = boto3.client("cloudwatch", region_name=region)
+    CLOUDTRAIL_CLIENT = boto3.client("cloudtrail", region_name=region)
+    ROUTE53_CLIENT = boto3.client("route53", region_name=region)
+    IAM_CLIENT = boto3.client("iam", region_name=region)
 
     WAF_CLIENT = boto3.client("wafv2", region_name=region)
     LAMBDA_CLIENT = boto3.client("lambda", region_name=region)
