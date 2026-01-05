@@ -741,6 +741,7 @@ def verify_region_input(region_choice, region, steps):
                 first_region = "us-east-1"
         else:
             all_regions = verify_one_region(region)
+            first_region = region
     except IndexError:
         print(f"{ERROR} Please only enter valid region and follow the pattern needed.")
         sys.exit(-1)
@@ -954,3 +955,4 @@ def main():
 if __name__ == "__main__":
     main()
         
+
