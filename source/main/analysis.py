@@ -35,7 +35,7 @@ class Analysis:
 
         #new folder for each run
         now = datetime.datetime.now()
-        self.time = now.strftime("%H:%M:%S")
+        self.time = now.strftime("%H-%M-%S")
 
         if dl:
             self.path = ROOT_FOLDER + self.region + "/queries-results/"
